@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Library</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <header>
@@ -16,7 +16,43 @@
     </header>
     <main>
       <div class="container">
+        <div class="book">
+          <div class="book-title">Atomic Habits</div>
+          <div class="book-details">
+            <div class="author detail">
+              <div class="author-hero">Author</div>
+              <div class="author">James Clear</div>
+            </div>
+            <div class="status detail">
+              <div class="status-hero">Status</div>
+              <div class="what-status">Not Started</div>
+            </div>
+            <div class="pages detail">
+              <div class="pages-hero">Pages</div>
+              <div class="page-nos">200</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="add-book-form">
+        <form action="">
+          <h2>Add a Book</h2>
+          <label for="book-titel">Title</label>
+          <input type="text" name="book-title" id="book-title" />
 
+          <label for="author">Author</label>
+          <input type="text" name="author" id="author" />
+
+          <label for="status">Status</label>
+          <select name="status" id="status">
+            <option value="in-progress">In Progress</option>
+            <option value="not-read">Not Started</option>
+            <option value="completed">Completed</option>
+          </select>
+
+          <label for="page-count">Pages</label>
+          <input type="number" name="page" id="page" />
+        </form>
       </div>
     </main>
   </body>

@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Source Sans Pro",sans-serif;
+}
+:root{
+  --color-primary-blue: #0077b6;
+  --color-secondary-blue: #03045e;
+  --color-ocean-blue: #00b4d8;
+  --color-white-blue: #90e0ef;
+  --color-more-white-blue: #caf0f8;
+  --color-white: #f8f7ff;
+  --color-black: #00171f;
+}
+nav{
+  background-color: var(--color-primary-blue);
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem;
+  align-items: center;
+  color: var(--color-white);
+}
+.library-name{
+  font-size: 1.5rem;
+}
+
+.add-a-book-btn{
+  background-color: var(--color-ocean-blue);
+  padding: 1rem;
+  border-radius: 10px;
+  font-weight: 600;
+}

@@ -71,3 +71,33 @@ nav{
 }
 
 /* Book Form Style */
+.add-book-form{
+  background-color: var(--color-white-blue);
+  width: 500px;
+  margin: auto;
+  border-radius: 20px;
+  padding: 1rem;
+  display: grid;
+  display: none;
+}
+.form{
+  color: var(--color-white);
+  display: none;
+}
+form > h2{
+  text-align: center;
+  padding: 0 0 1rem;
+  font-size: 2rem;
+}
+.form > div > label{
+  display: block;
+  padding: 0.5rem 0;
+  font-weight: 600;
+  color: var(--color-white);
+  font-size: 1rem;
+}
+
+.form > div > input, .form > div > select{
+  width: 100%;
+  padding: 0.5rem;
+}

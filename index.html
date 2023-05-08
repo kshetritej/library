@@ -35,23 +35,31 @@
         </div>
       </div>
       <div class="add-book-form">
-        <form action="">
+        <form action="" class="form">
           <h2>Add a Book</h2>
-          <label for="book-titel">Title</label>
-          <input type="text" name="book-title" id="book-title" />
+          <div class="title-field">
+            <label for="book-titel">Title</label>
+            <input type="text" name="book-title" id="book-title" />
+          </div>
 
-          <label for="author">Author</label>
-          <input type="text" name="author" id="author" />
+          <div class="author-field">
+            <label for="author">Author</label>
+            <input type="text" name="author" id="author" />
+          </div>
 
-          <label for="status">Status</label>
-          <select name="status" id="status">
-            <option value="in-progress">In Progress</option>
-            <option value="not-read">Not Started</option>
-            <option value="completed">Completed</option>
-          </select>
+          <div class="status-field">
+            <label for="status">Status</label>
+            <select name="status" id="status">
+              <option value="in-progress">In Progress</option>
+              <option value="not-read">Not Started</option>
+              <option value="completed">Completed</option>
+            </select>
+          </div>
 
-          <label for="page-count">Pages</label>
-          <input type="number" name="page" id="page" />
+          <div class="pages-field">
+            <label for="page-count">Pages</label>
+            <input type="number" name="page" id="page" />
+          </div>
         </form>
       </div>
     </main>

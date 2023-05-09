@@ -109,8 +109,15 @@ function displayBook(index){
   const removeBook = document.createElement("div");
   removeBook.className ="remove-book";
   removeBook.textContent = "Remove";
-  removeBook.setAttribute("style","")
   bookCard.appendChild(removeBook);
+
+  removeBook.addEventListener("click",(e)=>{
+    e.preventDefault();
+    const bookIndex = library.indexOf(Book);
+    library.splice(bookIndex,1);
+
+    bookCard.remove();
+  });
 }
 
 

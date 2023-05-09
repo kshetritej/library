@@ -29,14 +29,18 @@ nav{
 .add-a-book-btn{
   background-color: var(--color-ocean-blue);
   padding: 1rem;
+  border:none;
+  color: var(--color-white);
   border-radius: 10px;
   font-weight: 600;
 }
 
 /* Book Style */
-.container{
-  height: 100vh;
+main{
   background-color: var(--color-more-white-blue);
+  height: calc(91vh);
+}
+.container{
   padding: 1rem;
   display: grid;
   gap: 1.5rem;
@@ -77,12 +81,15 @@ nav{
   margin: auto;
   border-radius: 20px;
   padding: 1rem;
-  display: grid;
   display: none;
+  position: absolute;
+  top: 200px;
+  left: 750px;
+  z-index: 1;
 }
 .form{
   color: var(--color-white);
-  display: none;
+  display: hidden;
 }
 form > h2{
   text-align: center;

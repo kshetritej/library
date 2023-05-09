@@ -1,11 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap');
-*{
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap");
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Source Sans Pro",sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
 }
-:root{
+:root {
   --color-primary-blue: #0077b6;
   --color-secondary-blue: #03045e;
   --color-ocean-blue: #00b4d8;
@@ -14,7 +14,7 @@
   --color-white: #f8f7ff;
   --color-black: #00171f;
 }
-nav{
+nav {
   background-color: var(--color-primary-blue);
   display: flex;
   justify-content: space-between;
@@ -23,51 +23,51 @@ nav{
   align-items: center;
   color: var(--color-white);
 }
-.library-name{
+.library-name {
   font-size: 1.5rem;
 }
-.add-a-book-btn{
+.add-a-book-btn {
   background-color: var(--color-ocean-blue);
   padding: 1rem;
-  border:none;
+  border: none;
   color: var(--color-white);
   border-radius: 10px;
   font-weight: 600;
 }
 
 /* Book Style */
-main{
+main {
   background-color: var(--color-more-white-blue);
   height: calc(91vh);
 }
-.container{
+.container {
   padding: 1rem;
   display: grid;
   gap: 1.5rem;
   grid-auto-flow: column;
-  grid-template-columns: repeat(6,1fr);
-  grid-template-rows: repeat(4,1fr);
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(4, 1fr);
 }
 @media only screen and (max-width: 720px) {
-  .container{
+  .container {
     grid-template-columns: 1fr;
   }
 }
-.book{
+.book {
   background-color: var(--color-white);
   padding: 2rem;
   border-radius: 10px;
   grid-row: 1/2;
 }
-.book-title{
+.book-title {
   font-size: 1.5rem;
   padding: 0.1rem;
 }
-.book-details{
+.book-details {
   display: grid;
   grid-template-columns: 1fr;
 }
-.detail{
+.detail {
   display: flex;
   justify-content: space-between;
   padding: 0.1rem;
@@ -75,7 +75,7 @@ main{
 }
 
 /* Book Form Style */
-.form{
+.form {
   background-color: var(--color-white-blue);
   color: var(--color-white);
   width: 500px;
@@ -89,12 +89,12 @@ main{
   z-index: 1;
 }
 
-form > h2{
+form > h2 {
   text-align: center;
   padding: 0 0 1rem;
   font-size: 2rem;
 }
-.form > div > label{
+.form > div > label {
   display: block;
   padding: 0.5rem 0;
   font-weight: 600;
@@ -102,7 +102,8 @@ form > h2{
   font-size: 1rem;
 }
 
-.form > div > input, .form > div > select{
+.form > div > input,
+.form > div > select {
   width: 100%;
   padding: 0.5rem;
 }
@@ -113,9 +114,20 @@ form > h2{
   text-align: center;
   background-color: var(--color-ocean-blue);
   color: var(--color-white);
-  border:none;
+  border: none;
   display: block;
   margin: 1rem auto;
   font-weight: 600;
   font-size: 1rem;
+}
+
+/* Remove Book Button */
+.remove-book {
+  background-color: red;
+  text-align: center;
+  color: white;
+  padding: 0.3rem;
+  margin-top: 1rem;
+  font-weight: 600;
+  border-radius: 10px;
 }

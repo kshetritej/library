@@ -8,9 +8,14 @@ function Book(title, author, status, pages) {
 const addBookBtn = document.querySelector(".add-a-book-btn");
 const addBookForm = document.querySelector(".add-book-form");
 const form = document.querySelector(".form");
-addBookBtn.addEventListener("click", () => {
-  addBookForm.style.display = block;
-  form.style.display = block;
-})
 
+addBookBtn.addEventListener("click", () => {
+  addBookForm.style.display = "block";
+  form.style.display = "block";
+});
+
+const submitBtn = document.querySelector(".submit-button");
+submitBtn.addEventListener("click",()=>{
+  form.style.display = "none";
+})
 

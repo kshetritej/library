@@ -75,8 +75,9 @@ main{
 }
 
 /* Book Form Style */
-.add-book-form{
+.form{
   background-color: var(--color-white-blue);
+  color: var(--color-white);
   width: 500px;
   margin: auto;
   border-radius: 20px;
@@ -87,10 +88,7 @@ main{
   left: 750px;
   z-index: 1;
 }
-.form{
-  color: var(--color-white);
-  display: hidden;
-}
+
 form > h2{
   text-align: center;
   padding: 0 0 1rem;
@@ -107,4 +105,17 @@ form > h2{
 .form > div > input, .form > div > select{
   width: 100%;
   padding: 0.5rem;
+}
+
+.submit-button {
+  padding: 0.5rem;
+  width: 50%;
+  text-align: center;
+  background-color: var(--color-ocean-blue);
+  color: var(--color-white);
+  border:none;
+  display: block;
+  margin: 1rem auto;
+  font-weight: 600;
+  font-size: 1rem;
 }

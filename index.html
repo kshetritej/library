@@ -40,17 +40,17 @@
           <h2>Add a Book</h2>
           <div class="title-field">
             <label for="book-titel">Title</label>
-            <input type="text" name="book-title" id="book-title" />
+            <input type="text" name="book-title" id="book-title" required />
           </div>
 
           <div class="author-field">
             <label for="author">Author</label>
-            <input type="text" name="author" id="author" />
+            <input type="text" name="author" id="author" required />
           </div>
 
           <div class="status-field">
             <label for="status">Status</label>
-            <select name="status" id="status">
+            <select name="status" id="status" required>
               <option value="in-progress">In Progress</option>
               <option value="not-read">Not Started</option>
               <option value="completed">Completed</option>
@@ -61,6 +61,7 @@
             <label for="page-count">Pages</label>
             <input type="number" name="page" id="page" />
           </div>
+          <button type="submit" class="submit-button">Add</button>
         </form>
       </div>
     </main>

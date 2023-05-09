@@ -1,4 +1,18 @@
+const container = document.querySelector(".container");
+const addBookBtn = document.querySelector(".add-a-book-btn");
+const addBookForm = document.querySelector(".add-book-form");
+const form = document.querySelector(".form");
+
  let library = [];
+ let dummy ={
+  title : 'Atomic Habits',
+  author : 'James Clear',
+  status : 'Completed',
+  pages : 299,
+ }
+ library.push(dummy);
+ console.log(library)
+ displayBook(library.length -1);
 
 function Book(title,author,status,pages){
   this.title = title;
@@ -10,12 +24,7 @@ function Book(title,author,status,pages){
 function addBookToLibrary(title, author, status, pages) {
   const newBook = new Book(title,author,status,pages);
   library.push(newBook);
-  console.log(library);
 }
-
-const addBookBtn = document.querySelector(".add-a-book-btn");
-const addBookForm = document.querySelector(".add-book-form");
-const form = document.querySelector(".form");
 
 addBookBtn.addEventListener("click", (e) => {
   e.preventDefault();
@@ -45,8 +54,6 @@ submitBtn.addEventListener("click",(e)=>{
 });
 
 // Display card on book add
-const container = document.querySelector(".container");
-
 function displayBook(index){
   const bookCard = document.createElement("div");
   bookCard.className = "book";

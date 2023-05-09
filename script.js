@@ -3,18 +3,18 @@ const addBookBtn = document.querySelector(".add-a-book-btn");
 const addBookForm = document.querySelector(".add-book-form");
 const form = document.querySelector(".form");
 
- let library = [];
- let dummy ={
-  title : 'Atomic Habits',
-  author : 'James Clear',
-  status : 'Completed',
-  pages : 299,
- }
- library.push(dummy);
- console.log(library)
- displayBook(library.length -1);
+let library = [];
+let dummy = {
+  title: 'Atomic Habits',
+  author: 'James Clear',
+  status: 'Completed',
+  pages: 299,
+}
+library.push(dummy);
+console.log(library)
+displayBook(library.length - 1);
 
-function Book(title,author,status,pages){
+function Book(title, author, status, pages) {
   this.title = title;
   this.author = author;
   this.status = status;
@@ -22,7 +22,7 @@ function Book(title,author,status,pages){
 }
 
 function addBookToLibrary(title, author, status, pages) {
-  const newBook = new Book(title,author,status,pages);
+  const newBook = new Book(title, author, status, pages);
   library.push(newBook);
 }
 
@@ -34,7 +34,7 @@ addBookBtn.addEventListener("click", (e) => {
 
 // Get Input from Form
 const submitBtn = document.querySelector(".submit-button");
-submitBtn.addEventListener("click",(e)=>{
+submitBtn.addEventListener("click", (e) => {
   e.preventDefault();
   const titleName = document.getElementById("book-title");
   const title = titleName.value;
@@ -48,13 +48,13 @@ submitBtn.addEventListener("click",(e)=>{
   const pagesCount = document.getElementById("page");
   const pages = pagesCount.value;
 
-  addBookToLibrary(title,author,status,pages);
+  addBookToLibrary(title, author, status, pages);
   form.style.display = "none";
-  displayBook(library.length -1);
+  displayBook(library.length - 1);
 });
 
 // Display card on book add
-function displayBook(index){
+function displayBook(index) {
   const bookCard = document.createElement("div");
   bookCard.className = "book";
   container.appendChild(bookCard);
@@ -79,7 +79,7 @@ function displayBook(index){
   authorHero.textContent = "Author";
 
   const author = document.createElement("div");
-  author.classNae = "author";
+  author.className= "author";
   authorDetail.appendChild(author);
   author.textContent = library[index].author;
 
@@ -94,9 +94,20 @@ function displayBook(index){
   statusHero.textContent = "Status";
 
   const status = document.createElement("div");
-  status.classNae = "what-status";
+  status.className = "what-status";
   statusDetail.appendChild(status);
   status.textContent = library[index].status;
+
+  // Create color notation for status
+  if (status.textContent == "Completed") {
+    status.style.background = "#90ee90";
+  }
+  else if (status.textContent == "Not Started") {
+    status.style.background = "#f08080";
+  }
+  else {
+    status.style.background = "#ffe200";
+  }
 
   // Pages Details
   const pagesDetail = document.createElement("div");
@@ -114,14 +125,14 @@ function displayBook(index){
   pages.textContent = library[index].pages;
 
   const removeBook = document.createElement("div");
-  removeBook.className ="remove-book";
+  removeBook.className = "remove-book";
   removeBook.textContent = "Remove";
   bookCard.appendChild(removeBook);
 
-  removeBook.addEventListener("click",(e)=>{
+  removeBook.addEventListener("click", (e) => {
     e.preventDefault();
     const bookIndex = library.indexOf(Book);
-    library.splice(bookIndex,1);
+    library.splice(bookIndex, 1);
 
     bookCard.remove();
   });

@@ -149,7 +149,9 @@ form > h2 {
   border-radius: 5px;
   padding: 0.2rem;
   font-weight: 500;
-
+}
+.what-status:hover{
+  cursor: pointer;
 }
 
 /* footer */

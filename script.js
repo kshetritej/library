@@ -35,6 +35,7 @@ addBookBtn.addEventListener("click", (e) => {
 const submitBtn = document.querySelector(".submit-button");
 submitBtn.addEventListener("click", (e) => {
   e.preventDefault();
+  const Inputs = document.querySelectorAll("input");
   const titleName = document.getElementById("book-title");
   const title = titleName.value;
 
@@ -50,13 +51,17 @@ submitBtn.addEventListener("click", (e) => {
   addBookToLibrary(title, author, status, pages);
 
   // Clear Input Fields once Inputs are submitted
-  const Inputs = document.querySelectorAll("input");
   Inputs.forEach(input => {
     input.value = "";
   });
   form.style.display = "none";
   displayBook(library.length - 1);
 });
+// Cancel Button to cancel adding book
+const cancelBtn = document.querySelector(".cancel-button");
+cancelBtn.addEventListener("click",()=>{
+  form.style.display = "none";
+})
 
 // Display card on book add
 function displayBook(index) {

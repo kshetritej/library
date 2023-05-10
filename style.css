@@ -110,7 +110,7 @@ form > h2 {
   padding: 0.5rem;
 }
 
-.submit-button {
+.submit-button,.cancel-button {
   padding: 0.5rem;
   width: 50%;
   text-align: center;
@@ -121,6 +121,9 @@ form > h2 {
   margin: 1rem auto;
   font-weight: 600;
   font-size: 1rem;
+}
+.cancel-button{
+  background-color: var(--color-black);
 }
 
 /* Remove Book Button */

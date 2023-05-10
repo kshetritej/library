@@ -52,12 +52,6 @@ main {
   grid-template-rows: repeat(auto, 1fr);
   justify-content: space-around;
 }
-/* @media only screen and (max-width: 720px) {
-  .container {
-    grid-template-columns: 1fr;
-  } 
-}
-*/
 
 .book {
   background-color: var(--color-white);
@@ -167,4 +161,19 @@ form > h2 {
 .foo > .uil{
   font-size: 1.5rem;
   padding: 0 0 0 1rem;
+}
+
+
+/* !Media Queries */
+@media only screen and (max-width: 429px) {
+  .container {
+    grid-template-columns: 1fr;
+  } 
+  .form{
+    width: 300px;
+    position: absolute;
+    top: 200px;
+    left: 70px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  }
 }

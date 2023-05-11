@@ -108,6 +108,8 @@ function displayBook(index) {
   statusDetail.appendChild(status);
   status.textContent = library[index].status;
 
+
+
   // Create color notation for status
   if (status.textContent == "Completed") {
     status.style.background = "#90ee90";
@@ -119,24 +121,6 @@ function displayBook(index) {
     status.style.background = "#ffe200";
   }
 
-  // Change Status
-
-
-  status.addEventListener('click', () => {
-
-    console.log(library);
-    if (status.textContent == "Not Started") {
-      status.textContent = "In Progress";
-      status.style.background = "#ffe200";
-    }
-    else if (status.textContent == "In Progress") {
-      status.textContent = "Completed";
-      status.style.background = "#90ee90";
-    }
-    else {
-      status.textContent = "Not Started";
-      status.style.background = "#f08080";
-    }
     // const dropDown = document.createElement("div");
     // let isDropdownOpen = false;
     //   dropDown.className = "status-dropdown";
@@ -169,7 +153,7 @@ function displayBook(index) {
     //     dropDown.style.display = "none";
     //   }) 
     // !Will work on this complex behavior later.
-  });
+  // });
 
   // Pages Details
   const pagesDetail = document.createElement("div");
@@ -191,13 +175,38 @@ function displayBook(index) {
   removeBook.textContent = "Remove";
   bookCard.appendChild(removeBook);
 
+  const bookIndex = library.indexOf(Book);
+  // Change Status
+  status.addEventListener('click', () => {  
+    if (status.textContent == "Not Started") {
+      status.textContent = "In Progress";
+      status.style.background = "#ffe200";
+    }
+    else if (status.textContent == "In Progress") {
+      status.textContent = "Completed";
+      status.style.background = "#90ee90";
+    }
+    else {
+      status.textContent = "Not Started";
+      status.style.background = "#f08080";
+    }
+    library[index].status = status.textContent;
+    console.log(library);
+  });
+
+  console.log(library);
   removeBook.addEventListener("click", (e) => {
     e.preventDefault();
-    const bookIndex = library.indexOf(Book);
-    library.splice(bookIndex, 1);
-
+    library.splice(bookIndex,1);
     bookCard.remove();
   });
 }
+
+// function changeStatus(index, newStatus){
+//   library[index].status = newStatus;
+// }
+
+
+
 
 

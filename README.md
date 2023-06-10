@@ -13,3 +13,6 @@
 
 ## API's
 * [Google Fonts](https://fonts.google.com)
+
+## Live Preview
+[See Live Preview ↗️](https://kshetritej.github.io/library/)

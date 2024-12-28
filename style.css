@@ -40,7 +40,6 @@ nav {
 
 /* Book Style */
 main {
-  background-color: var(--color-more-white-blue);
   max-height: calc(100% - (56px + 86px));
   min-height: calc(100vh -(56px));
 }
@@ -54,7 +53,7 @@ main {
 }
 
 .book {
-  background-color: var(--color-white);
+  background-color: var(--color-more-white-blue);
   padding: 2rem;
   border-radius: 10px;
   display: flex;
@@ -155,6 +154,9 @@ form > h2 {
 .foo{
   display: flex;
   padding: 1rem;
+  position: absolute;
+  bottom: 0;
+  width: 100vw;
   background-color: var(--color-primary-blue);
   align-items: center;
   justify-content: center;
